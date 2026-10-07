@@ -23,55 +23,7 @@ export default function OmniChannelHub({ currentRole, onOpenDialer }) {
 
   const canDownloadRecordings = ['super_admin', 'admin', 'manager'].includes(currentRole);
 
-  const [events, setEvents] = useState([
-    {
-      id: 'comm-1',
-      channel: 'voice',
-      type: 'inbound',
-      title: 'Inbound WebRTC Voice Call with Margaret Evans',
-      contact: 'Margaret Evans (FinTech Global)',
-      timestamp: 'Today at 11:24 AM',
-      duration: '04m 12s',
-      status: 'Recorded & Saved to MinIO',
-      storageUri: 'minio://crm-recordings/2026/05/call_evans_1124.wav',
-      size: '3.8 MB',
-      sentiment: 'Positive (+89%)',
-      summary: 'Discussed annual enterprise license renewal, requested 10% volume discount for 50 additional seats. Agreed to send proposal by 2 PM.',
-    },
-    {
-      id: 'comm-2',
-      channel: 'whatsapp',
-      type: 'outbound',
-      title: 'WhatsApp Cloud API Message Sent',
-      contact: 'Floyd Miles (Stark Project)',
-      timestamp: 'Today at 10:45 AM',
-      template: 'contract_review_v2',
-      status: 'Read (Blue Double Ticks)',
-      content: 'Hello Floyd! The customized proposal for Stark Project has been generated. Please review the attached contract summary at your convenience.',
-    },
-    {
-      id: 'comm-3',
-      channel: 'email',
-      type: 'inbound',
-      title: 'Email Received via IMAP SSL',
-      contact: 'Kristin Watson (7Heros Group)',
-      timestamp: 'Today at 09:15 AM',
-      subject: 'Re: Technical Architecture Specification for Self-Hosted CRM',
-      content: 'Hi Team, We reviewed the Docker Compose deployment specs and MinIO storage configuration. Everything aligns with our internal IT security compliance.',
-      attachment: 'Security_Audit_Checklist.pdf (1.2 MB)',
-    },
-    {
-      id: 'comm-4',
-      channel: 'sms',
-      type: 'outbound',
-      title: 'SMS Dispatched via Gateway',
-      contact: 'Guy Hawkins (+1 555-0144)',
-      timestamp: 'Yesterday at 04:30 PM',
-      gateway: 'SMPP / Twilio Gateway',
-      status: 'Delivered (DLR Confirmed)',
-      content: 'Your appointment with Margaret is confirmed for tomorrow at 10:00 AM. Location: Main Conference Room.',
-    },
-  ]);
+  const [events, setEvents] = useState([]);
 
   const filteredEvents = activeChannel === 'all' 
     ? events 

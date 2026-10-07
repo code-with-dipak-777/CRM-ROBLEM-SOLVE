@@ -22,54 +22,11 @@ export default function UnifiedInboxView() {
   const [activeThreadId, setActiveThreadId] = useState('th-1');
   const [replyText, setReplyText] = useState('');
 
-  const threads = [
-    {
-      id: 'th-1',
-      customer: 'Rahul Sharma (CTO)',
-      company: 'FinTech Innovations',
-      channel: 'whatsapp',
-      lastMessage: 'Could you send over the final data migration schedule before our board meeting?',
-      time: '10:20 AM',
-      unread: true,
-      sentiment: 'Positive (+84%)',
-      priority: 'HIGH',
-      assigned: 'Megan Norton',
-    },
-    {
-      id: 'th-2',
-      customer: 'Sarah Jenkins',
-      company: 'Stark Logistics',
-      channel: 'email',
-      lastMessage: 'Awaiting escalation response on SMS latency issues.',
-      time: 'Yesterday',
-      unread: false,
-      sentiment: 'Negative (-45%)',
-      priority: 'URGENT',
-      assigned: 'Guy Hawkins',
-    },
-    {
-      id: 'th-3',
-      customer: 'David Vance',
-      company: 'Apex Financial',
-      channel: 'voice',
-      lastMessage: 'WebRTC call concluded. MinIO recording stored: 08m 42s.',
-      time: 'Yesterday',
-      unread: false,
-      sentiment: 'Very Positive (+92%)',
-      priority: 'MEDIUM',
-      assigned: 'Megan Norton',
-    },
-  ];
+  const threads = [];
 
-  const chronologicalTimeline = [
-    { time: '09:10 AM', channel: 'email', icon: Mail, label: 'Email Received', content: 'Sent RFP clarification requirements regarding persistent MinIO storage.', color: 'text-purple-600 bg-purple-50' },
-    { time: '10:20 AM', channel: 'whatsapp', icon: WhatsAppIcon, isCustom: true, label: 'WhatsApp Cloud API', content: 'Rahul: "Could you send over the final data migration schedule before our board meeting?"', color: 'text-emerald-600 bg-emerald-50' },
-    { time: '11:45 AM', channel: 'voice', icon: PhoneCall, label: 'WebRTC Call — 06:32', content: 'Discussed Enterprise 50-seat rollout. Audio recording saved to MinIO S3.', color: 'text-blue-600 bg-blue-50' },
-    { time: '01:00 PM', channel: 'note', icon: StickyNote, label: 'Internal Agent Note', content: 'Megan: "Rahul is ready to sign. Needs 10% volume discount approved by Manager."', color: 'text-amber-600 bg-amber-50' },
-    { time: '03:30 PM', channel: 'ticket', icon: Ticket, label: 'Support Ticket #T-4091', content: 'Resolved: Webhook callback configuration on WhatsApp Cloud API endpoint.', color: 'text-rose-600 bg-rose-50' },
-  ];
+  const chronologicalTimeline = [];
 
-  const activeThread = threads.find((t) => t.id === activeThreadId) || threads[0];
+  const activeThread = threads.find((t) => t.id === activeThreadId) || threads[0] || {};
 
   const handleUseAiReply = (suggestion) => {
     setReplyText(suggestion);

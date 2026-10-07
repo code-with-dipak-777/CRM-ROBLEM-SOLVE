@@ -20,11 +20,11 @@ export default function OpportunityRadar() {
   const [activeFilter, setActiveFilter] = useState('all');
 
   const stats = [
-    { id: 'hot', label: 'HOT LEADS', count: 12, icon: Flame, color: 'text-rose-500 bg-rose-50 border-rose-200', pill: 'bg-rose-500' },
-    { id: 'risk', label: 'AT-RISK DEALS', count: 7, icon: AlertTriangle, color: 'text-amber-500 bg-amber-50 border-amber-200', pill: 'bg-amber-500' },
-    { id: 'upsell', label: 'UPSELL OPP.', count: 18, icon: Gem, color: 'text-blue-500 bg-blue-50 border-blue-200', pill: 'bg-blue-500' },
-    { id: 'churn', label: 'CHURN RISK', count: 5, icon: AlertOctagon, color: 'text-purple-500 bg-purple-50 border-purple-200', pill: 'bg-purple-500' },
-    { id: 'followup', label: 'FOLLOW-UPS', count: 23, icon: PhoneCall, color: 'text-emerald-500 bg-emerald-50 border-emerald-200', pill: 'bg-emerald-500' },
+    { id: 'hot', label: 'HOT LEADS', count: 0, icon: Flame, color: 'text-rose-500 bg-rose-50 border-rose-200', pill: 'bg-rose-500' },
+    { id: 'risk', label: 'AT-RISK DEALS', count: 0, icon: AlertTriangle, color: 'text-amber-500 bg-amber-50 border-amber-200', pill: 'bg-amber-500' },
+    { id: 'upsell', label: 'UPSELL OPP.', count: 0, icon: Gem, color: 'text-blue-500 bg-blue-50 border-blue-200', pill: 'bg-blue-500' },
+    { id: 'churn', label: 'CHURN RISK', count: 0, icon: AlertOctagon, color: 'text-purple-500 bg-purple-50 border-purple-200', pill: 'bg-purple-500' },
+    { id: 'followup', label: 'FOLLOW-UPS', count: 0, icon: PhoneCall, color: 'text-emerald-500 bg-emerald-50 border-emerald-200', pill: 'bg-emerald-500' },
   ];
 
   const radarItems = activeFilter === 'all'

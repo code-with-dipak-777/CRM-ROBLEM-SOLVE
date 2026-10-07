@@ -3,35 +3,7 @@ import { Search, Clock, MoreHorizontal, ChevronDown } from 'lucide-react';
 import { AudioWaveIcon, TerminalIcon } from './Icons';
 import gsap from 'gsap';
 
-const initialTasks = [
-  {
-    id: 1,
-    title: 'Product Review for UI8 Market',
-    status: 'In progress',
-    statusDotColor: 'bg-[#F97316]',
-    time: '4h',
-    icon: AudioWaveIcon,
-    iconBg: 'bg-[#EBF5FF] text-[#3B82F6]',
-  },
-  {
-    id: 2,
-    title: 'UX Research for Product',
-    status: 'On hold',
-    statusDotColor: 'bg-[#3B82F6]',
-    time: '8h',
-    icon: Search,
-    iconBg: 'bg-[#FFF3E8] text-[#EA580C]',
-  },
-  {
-    id: 3,
-    title: 'App design and development',
-    status: 'Done',
-    statusDotColor: 'bg-[#10B981]',
-    time: '32h',
-    icon: TerminalIcon,
-    iconBg: 'bg-[#F1F5F9] text-[#64748B]',
-  },
-];
+const initialTasks = [];
 
 export default function CurrentTasks() {
   const [tasks, setTasks] = useState(initialTasks);

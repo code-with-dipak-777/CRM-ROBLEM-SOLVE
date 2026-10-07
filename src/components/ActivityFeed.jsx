@@ -4,42 +4,7 @@ import { FigmaIcon } from './Icons';
 import gsap from 'gsap';
 
 export default function ActivityFeed() {
-  const [messages, setMessages] = useState([
-    {
-      id: 'msg-1',
-      user: 'Floyd Miles',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80',
-      statusColor: 'bg-[#22C55E]',
-      time: '10:15 AM',
-      action: 'Commented on',
-      project: 'Stark Project',
-      type: 'comment',
-      text: "Hi! Next week we'll start a new project. I'll tell you all the details later",
-      reaction: '👍',
-    },
-    {
-      id: 'msg-2',
-      user: 'Guy Hawkins',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80',
-      statusColor: 'bg-[#22C55E]',
-      time: '10:15 AM',
-      action: 'Added a file to',
-      project: '7Heros Project',
-      type: 'file',
-      fileName: 'Homepage.fig',
-      fileSize: '13.4 Mb',
-    },
-    {
-      id: 'msg-3',
-      user: 'Kristin Watson',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80',
-      statusColor: 'bg-[#F43F5E]',
-      time: '10:15 AM',
-      action: 'Commented on',
-      project: '7Heros Project',
-      type: 'text_only',
-    },
-  ]);
+  const [messages, setMessages] = useState([]);
 
   const [inputVal, setInputVal] = useState('');
   const feedListRef = useRef(null);

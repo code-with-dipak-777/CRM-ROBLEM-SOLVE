@@ -58,40 +58,12 @@ export default function AiCopilotPanel() {
 
     // Generate context-aware AI response based on query
     setTimeout(() => {
-      if (query.toLowerCase().includes('rahul')) {
-        addCopilotMessage({
-          sender: 'ai',
-          isStructured: true,
-          customerName: 'Rahul Sharma (CTO, FinTech Innovations)',
-          currentDeal: 'Cloud Infrastructure & Omni-Channel License',
-          dealValue: '₹32,50,000 (82% Win Probability)',
-          lastComm: 'WebRTC Call (08m 42s) with Megan Norton on 07 Oct 2026',
-          sentiment: 'Positive (+84%)',
-          unresolvedIssues: 'Awaiting SOC2 compliance report & SLA agreement appendix',
-          objections: 'Previous concern over Docker deployment latency, resolved via MinIO S3 local caching benchmark.',
-          talkingPoints: [
-            'Highlight 99.99% local Docker container uptime benchmark.',
-            'Reiterate seamless WhatsApp Business Cloud API integration for KYC alerts.',
-            'Offer 2-year multi-year price lock with enterprise support SLA.',
-          ],
-          recommendedAction: 'Call Rahul now with final pricing addendum.',
-          timestamp: 'Just now',
-        });
-      } else if (query.toLowerCase().includes('risk') || query.toLowerCase().includes('attention')) {
-        addCopilotMessage({
-          sender: 'ai',
-          text: "Here are the top accounts requiring urgent attention today:\n\n1. 🔥 Stark Logistics Corp ($64,000) — Inactive for 18 days, churn risk high (78%).\n2. ⚠️ Indus Retail Cloud (₹28,00,000) — Lead score 94, awaiting WhatsApp demo confirmation.\n3. 🚨 Nexus Telecom (₹14,50,000/yr) — 3 open SLA tickets on SMS delivery latency.",
-          timestamp: 'Just now',
-          actions: ['Open Stark Logistics Customer 360', 'Launch Softphone to Call Rahul'],
-        });
-      } else {
-        addCopilotMessage({
-          sender: 'ai',
-          text: `Processed query: "${query}". I have analyzed customer interactions, MinIO call recordings, and pipeline telemetry to prepare recommended next actions.`,
-          timestamp: 'Just now',
-          actions: ['View Opportunity Radar', 'Open Unified Inbox'],
-        });
-      }
+      addCopilotMessage({
+        sender: 'ai',
+        text: `Processed query: "${query}". No data available in the current CRM instance.`,
+        timestamp: 'Just now',
+        actions: [],
+      });
     }, 400);
   };
 
@@ -133,9 +105,9 @@ export default function AiCopilotPanel() {
       {/* Suggested Quick Prompt Chips */}
       <div className="p-3 bg-slate-50 border-b border-slate-200/80 overflow-x-auto flex items-center gap-2">
         {[
-          'Tell me everything important about Rahul before I call him',
+          'Tell me about the last customer interaction',
           'Which customers need attention today?',
-          'Summarize 4 at-risk deals',
+          'Summarize open deals',
           'Show upsell candidates',
         ].map((prompt, idx) => (
           <button

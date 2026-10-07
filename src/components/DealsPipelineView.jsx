@@ -9,68 +9,7 @@ import {
 } from 'lucide-react';
 import { WhatsAppIcon } from './Icons';
 
-const initialDeals = [
-  {
-    id: 'deal-1',
-    title: 'Enterprise CRM Cloud Migration',
-    company: 'Stark Industries',
-    contact: 'Floyd Miles',
-    amount: '$64,000',
-    rawAmount: 64000,
-    stage: 'qualification',
-    probability: '40%',
-    dueDate: '24 May, 2026',
-    owner: 'Megan Norton',
-  },
-  {
-    id: 'deal-2',
-    title: 'Omni-Channel Voice & WhatsApp Suite',
-    company: 'FinTech Global Ltd',
-    contact: 'Margaret Evans',
-    amount: '$92,500',
-    rawAmount: 92500,
-    stage: 'proposal',
-    probability: '65%',
-    dueDate: '18 May, 2026',
-    owner: 'Megan Norton',
-  },
-  {
-    id: 'deal-3',
-    title: 'Self-Hosted Docker Server Deployment',
-    company: '7Heros Group',
-    contact: 'Guy Hawkins',
-    amount: '$45,000',
-    rawAmount: 45000,
-    stage: 'proposal',
-    probability: '70%',
-    dueDate: '30 May, 2026',
-    owner: 'Guy Hawkins',
-  },
-  {
-    id: 'deal-4',
-    title: 'MinIO Storage & Call Recording Audit',
-    company: 'Nexus Healthcare',
-    contact: 'Kristin Watson',
-    amount: '$110,000',
-    rawAmount: 110000,
-    stage: 'negotiation',
-    probability: '85%',
-    dueDate: '12 May, 2026',
-    owner: 'Megan Norton',
-  },
-  {
-    id: 'deal-5',
-    title: '5-Tier RBAC Banking Compliance Core',
-    company: 'Apex Financial',
-    contact: 'David Vance',
-    amount: '$145,000',
-    rawAmount: 145000,
-    stage: 'closed_won',
-    probability: '100%',
-    dueDate: '08 May, 2026',
-    owner: 'Megan Norton',
-  },
-];
+const initialDeals = [];
 
 const STAGES = [
   { id: 'qualification', label: '1. Lead Qualification', color: 'border-blue-400 bg-blue-50/20' },

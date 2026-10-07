@@ -35,28 +35,7 @@ export default function GlobalSearchModal() {
 
   if (!isSearchOpen) return null;
 
-  const mockSearchResults = [
-    {
-      category: 'Customers & Contacts',
-      items: [
-        { id: 'c1', title: 'Rahul Sharma', subtitle: 'CTO, FinTech Innovations • Deal: ₹32.5L', icon: User, type: 'customer', targetId: 'cust-1' },
-        { id: 'c2', title: 'Sarah Jenkins', subtitle: 'Stark Logistics • At-Risk Deal: $64k', icon: User, type: 'customer', targetId: 'cust-2' },
-      ],
-    },
-    {
-      category: 'AI Semantic Match: "customers who complained about pricing"',
-      items: [
-        { id: 's1', title: 'Elena Rostova (Baltic Pharma)', subtitle: 'Matched via Call Transcript: "Discussed MinIO encryption vs cloud pricing tier"', icon: Sparkles, type: 'lead', targetId: 'lead-2' },
-        { id: 's2', title: 'Margaret Evans Negotiation Call', subtitle: 'Transcript snippet: "Requested 10% volume discount on annual renewal"', icon: PhoneCall, type: 'call' },
-      ],
-    },
-    {
-      category: 'MinIO Call Audio Recordings',
-      items: [
-        { id: 'm1', title: 'call_evans_1124.wav', subtitle: 'minio://crm-recordings/2026/05/ • 3.8 MB • Sentiment: Positive', icon: MinioIcon, isCustomIcon: true, type: 'audio' },
-      ],
-    },
-  ];
+  const mockSearchResults = [];
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-start justify-center pt-20 p-4">

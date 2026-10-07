@@ -8,7 +8,7 @@ export const useCrmStore = create((set, get) => ({
   // Multi-Tenant Org
   currentOrg: 'Acme Enterprise Corp',
   setOrg: (org) => set({ currentOrg: org }),
-  availableOrgs: ['Acme Enterprise Corp', 'Apex Global Technologies', 'Stark Industries Local'],
+  availableOrgs: ['Acme Enterprise Corp'],
 
   // 5-Tier RBAC Role
   currentRole: 'super_admin',
@@ -29,31 +29,23 @@ export const useCrmStore = create((set, get) => ({
   setBenchmarkOpen: (open) => set({ isBenchmarkOpen: open }),
 
   // Active Customer for Customer 360 View
-  activeCustomerId: 'cust-1',
+  activeCustomerId: null,
   setActiveCustomer: (id) => set({ activeCustomerId: id, activeTab: 'customer360', isCopilotOpen: false }),
 
   // Selected Lead for Lead Intelligence
-  activeLeadId: 'lead-1',
+  activeLeadId: null,
   setActiveLead: (id) => set({ activeLeadId: id, activeTab: 'leads', isCopilotOpen: false }),
 
   // Global Notifications Count
-  notificationsCount: 5,
-  securityAlertsCount: 2,
+  notificationsCount: 0,
+  securityAlertsCount: 0,
 
   // Global Search Query
   searchQuery: '',
   setSearchQuery: (q) => set({ searchQuery: q }),
 
   // Copilot messages
-  copilotMessages: [
-    {
-      id: 'msg-1',
-      sender: 'ai',
-      text: "Hello Margaret! I'm your CRM Intelligence Copilot. You have 4 deals at risk, 7 high-value leads requiring contact today, and 2 churn alerts. How can I assist you?",
-      timestamp: '10:00 AM',
-      actions: ['Review At-Risk Deals', 'Check Hot Leads', 'Summarize Customer 360 for Rahul'],
-    },
-  ],
+  copilotMessages: [],
   addCopilotMessage: (msg) =>
     set((state) => ({
       copilotMessages: [...state.copilotMessages, { id: `msg-${Date.now()}`, ...msg }],
