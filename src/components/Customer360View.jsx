@@ -39,6 +39,14 @@ export default function Customer360View() {
     'AI Insights',
   ];
 
+  if (!customer) {
+    return (
+      <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 space-y-6 flex items-center justify-center min-h-[400px]">
+        <p className="text-slate-500 font-medium text-sm">No customer data available.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 space-y-6">
       {/* Customer 360 Header Bar */}

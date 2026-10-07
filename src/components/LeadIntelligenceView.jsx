@@ -17,8 +17,16 @@ import { useCrmStore } from '../store/useCrmStore';
 
 export default function LeadIntelligenceView() {
   const { setDialerOpen } = useCrmStore();
-  const [selectedLead, setSelectedLead] = useState(MOCK_LEADS[0]);
+  const [selectedLead, setSelectedLead] = useState(MOCK_LEADS[0] || null);
   const [showExplanation, setShowExplanation] = useState(true);
+
+  if (!selectedLead) {
+    return (
+      <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 space-y-6 flex items-center justify-center min-h-[400px]">
+        <p className="text-slate-500 font-medium text-sm">No lead intelligence data available.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 space-y-6">
